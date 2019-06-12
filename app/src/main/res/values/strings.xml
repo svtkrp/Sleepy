@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ChangeSettingsApp</string>
+    <string name="turn_off_button">Turn off bluetooth!</string>
+    <string name="cancel_button">Cancel</string>
+
+    <string name="notification_title">Bluetooth Notification</string>
+    <string name="short_notification_text">Bluetooth will be disabled on %s.</string>
+    <string name="long_notification_text">Now %s. Bluetooth will be disabled in %d sec, on %s.</string>
+
+    <string name="notification_channel_name">TurnOffService channel</string>
+    <string name="notification_channel_description">This is TurnOffService channel</string>
+</resources>
