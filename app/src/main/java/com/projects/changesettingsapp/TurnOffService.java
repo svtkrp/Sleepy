@@ -92,7 +92,7 @@ public class TurnOffService extends Service {
     private Notification createNotification(String currentTime, String timerTime) {
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
-                .setSmallIcon(R.mipmap.ic_launcher)
+                .setSmallIcon(R.drawable.time_icon)
                 .setContentTitle(getResources().getString(R.string.notification_title))
                 .setContentText(String.format
                         (getResources().getString(R.string.short_notification_text), timerTime))
@@ -102,7 +102,8 @@ public class TurnOffService extends Service {
                                         currentTime, mDelay / 1000, timerTime)))
                 .setPriority(NotificationCompat.PRIORITY_MAX)
                 .setOngoing(true)
-                .setShowWhen(true);
+                .setShowWhen(true)
+                .setColor(getResources().getColor(R.color.colorAccent));
 
         return builder.build();
     }

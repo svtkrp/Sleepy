@@ -10,30 +10,35 @@
         android:id="@+id/time_picker"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/turn_off_button"
+        android:headerBackground="@color/colorAccent"
+        android:numbersBackgroundColor="@color/colorLight"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/turn_off_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/colorLight"
+        android:padding="8dp"
         android:text="@string/turn_off_button"
         app:layout_constraintBottom_toTopOf="@+id/cancel_button"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/time_picker"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/time_picker" />
 
     <Button
         android:id="@+id/cancel_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/colorLight"
         android:text="@string/cancel_button"
+        android:padding="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/turn_off_button"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/turn_off_button" />
 
 
 </android.support.constraint.ConstraintLayout>
