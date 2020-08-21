@@ -11,6 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:headerBackground="@color/colorAccent"
+        android:numbersBackgroundColor="@color/colorAccent"
+        android:numbersTextColor="@color/colorPrimaryDark"
+        android:numbersInnerTextColor="@color/colorPrimaryDark"
+        android:numbersSelectorColor="@color/colorLight"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

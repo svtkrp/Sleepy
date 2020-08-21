@@ -1,5 +1,6 @@
 package com.projects.changesettingsapp;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
@@ -17,6 +18,8 @@ public class TurnOffActivity extends AppCompatActivity {
     TimePicker mTimePicker;
     Button mCancelButton;
 
+    private static final int REQUEST_SERVICE_IS_STOPPED = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +30,7 @@ public class TurnOffActivity extends AppCompatActivity {
         mTimePicker.setIs24HourView(true);
 
         mTurnOffButton = findViewById(R.id.turn_off_button);
+        mTurnOffButton.setVisibility(View.VISIBLE);
         mTurnOffButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,15 +53,23 @@ public class TurnOffActivity extends AppCompatActivity {
                         .append(":00").toString();
 
                 startService(TurnOffService.newIntent(TurnOffActivity.this,
-                        msTimer, currentTime, timerTime));
+                        msTimer, currentTime, timerTime,
+                        createPendingResult(REQUEST_SERVICE_IS_STOPPED, new Intent(), 0)));
+
+                mTurnOffButton.setVisibility(View.GONE);
+                mCancelButton.setVisibility(View.VISIBLE);
             }
         });
 
         mCancelButton = findViewById(R.id.cancel_button);
+        mCancelButton.setVisibility(View.GONE);
         mCancelButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 stopService(new Intent(TurnOffActivity.this, TurnOffService.class));
+
+                mTurnOffButton.setVisibility(View.VISIBLE);
+                mCancelButton.setVisibility(View.GONE);
             }
         });
     }
@@ -72,5 +84,21 @@ public class TurnOffActivity extends AppCompatActivity {
             return difference + secondsInDay;
         }
         return difference;
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode != Activity.RESULT_OK) {
+            return;
+        }
+        if (requestCode == REQUEST_SERVICE_IS_STOPPED) {
+            boolean isStopped = data
+                    .getBooleanExtra(TurnOffService.EXTRA_IS_STOPPED, false);
+            if (isStopped) {
+                mTurnOffButton.setVisibility(View.VISIBLE);
+                mCancelButton.setVisibility(View.GONE);
+            }
+        }
     }
 }

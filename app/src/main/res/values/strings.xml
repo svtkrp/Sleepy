@@ -1,12 +1,12 @@
 <resources>
-    <string name="app_name">ChangeSettingsApp</string>
+    <string name="app_name">Change Settings App</string>
     <string name="turn_off_button">Turn off bluetooth!</string>
-    <string name="cancel_button">Cancel</string>
+    <string name="cancel_button">Cancel timer</string>
 
-    <string name="notification_title">Bluetooth Notification</string>
+    <string name="notification_title">You set timer that turn off Bluetooth</string>
     <string name="short_notification_text">Bluetooth will be disabled on %s.</string>
-    <string name="long_notification_text">Now %s. Bluetooth will be disabled in %d sec, on %s.</string>
+    <string name="long_notification_text">It is %s now. Bluetooth will be disabled in %d hr, %d min and %d sec, on %s.</string>
 
-    <string name="notification_channel_name">TurnOffService channel</string>
-    <string name="notification_channel_description">This is TurnOffService channel</string>
+    <string name="notification_channel_name">Turn Off Bluetooth Service channel</string>
+    <string name="notification_channel_description">Notifications are showed, when you set timer</string>
 </resources>

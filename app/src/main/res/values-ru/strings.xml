@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Change Settings App</string>
+    <string name="turn_off_button">Выключить bluetooth!</string>
+    <string name="cancel_button">Отменить таймер</string>
+
+    <string name="notification_title">Вы установили таймер выключения Bluetooth</string>
+    <string name="short_notification_text">Bluetooth будет выключен в %s.</string>
+    <string name="long_notification_text">Сейчас %s. Bluetooth будет выключен через %d часов, %d минут и %d секунд, в %s.</string>
+
+    <string name="notification_channel_name">Канал службы выключения Bluetooth</string>
+    <string name="notification_channel_description">Уведомления показываются, когда вы устанавливаете таймер</string>
+</resources>

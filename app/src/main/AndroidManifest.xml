@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.BLUETOOTH"/>
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
         android:allowBackup="true"
@@ -15,8 +16,7 @@
         <service
             android:name="com.projects.changesettingsapp.TurnOffService"
             android:enabled="true"
-            android:exported="true"></service>
-
+            android:exported="true" />
         <activity android:name="com.projects.changesettingsapp.TurnOffActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
