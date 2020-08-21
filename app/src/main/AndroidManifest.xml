@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.projects.changesettingsapp">
+    package="com.projects.sleepy">
 
     <uses-permission android:name="android.permission.BLUETOOTH"/>
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
@@ -14,10 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <service
-            android:name="com.projects.changesettingsapp.TurnOffService"
+            android:name="com.projects.sleepy.TurnOffService"
             android:enabled="true"
             android:exported="true" />
-        <activity android:name="com.projects.changesettingsapp.TurnOffActivity">
+        <activity android:name="com.projects.sleepy.TurnOffActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

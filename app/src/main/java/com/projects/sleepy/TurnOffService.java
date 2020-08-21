@@ -1,4 +1,4 @@
-package com.projects.changesettingsapp;
+package com.projects.sleepy;
 
 import android.app.Activity;
 import android.app.Notification;
@@ -25,15 +25,15 @@ public class TurnOffService extends Service {
     private PendingIntent mPendingIntent;
 
     private static final String EXTRA_DELAY =
-            "com.projects.change_settings_app.delay";
+            "com.projects.sleepy.delay";
     private static final String EXTRA_CURRENT_TIME =
-            "com.projects.change_settings_app.current_time";
+            "com.projects.sleepy.current_time";
     private static final String EXTRA_TIMER_TIME =
-            "com.projects.change_settings_app.timer_time";
+            "com.projects.sleepy.timer_time";
     private static final String CHANNEL_ID = "turn_off_service_channel_id";
     private static final int NOTIFICATION_ID = 1;
 
-    private static final String EXTRA_PENDING_INTENT = "com.projects.change_settings_app.pending_intent";
+    private static final String EXTRA_PENDING_INTENT = "com.projects.sleepy.pending_intent";
     public static final String EXTRA_IS_STOPPED = "is_stopped";
 
     public TurnOffService() {

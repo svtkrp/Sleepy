@@ -1,4 +1,4 @@
-package com.projects.changesettingsapp;
+package com.projects.sleepy;
 
 import android.app.Activity;
 import android.content.Intent;

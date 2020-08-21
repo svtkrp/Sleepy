@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Change Settings App</string>
+    <string name="app_name">Sleepy</string>
     <string name="turn_off_button">Turn off bluetooth!</string>
     <string name="cancel_button">Cancel timer</string>
 

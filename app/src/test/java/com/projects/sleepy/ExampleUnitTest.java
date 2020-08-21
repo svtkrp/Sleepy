@@ -1,4 +1,4 @@
-package com.projects.changesettingsapp;
+package com.projects.sleepy;
 
 import org.junit.Test;
 
