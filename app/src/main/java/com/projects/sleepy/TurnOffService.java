@@ -112,7 +112,7 @@ public class TurnOffService extends Service {
         int seconds = allSeconds - hours * 3600 - minutes * 60;
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
-                .setSmallIcon(R.drawable.time_icon)
+                .setSmallIcon(R.drawable.ic_clock)
                 .setContentTitle(getResources().getString(R.string.notification_title))
                 .setContentText(String.format
                         (getResources().getString(R.string.short_notification_text),
